@@ -79,5 +79,14 @@ class DoubleLinkedList
 		cin >> rollNo;
 
 		Node *current = START;
+
+		while (current != NULL && current->noMhs != rollNo)
+			current = current->next;
+
+		if (current == NULL)
+		{
+			cout << "Record not found" <<endl;
+			return;
+		}
 	}
 };
