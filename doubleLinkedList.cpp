@@ -59,6 +59,19 @@ class DoubleLinkedList
 		if (current->next != NULL && nim == current->next->noMhs)
 		{
 			cout << "\nDuplicate roll number not allowed" << endl;
+			return;
+		}
+
+		newNode->next = current->next;
+		newNode->next->prev = newNode;
+	}
+
+	void hapus()
+	{
+		if (START == NULL)
+		{
+			cout << "\nList is empty" <<endl;
+			return;
 		}
 	}
 };
